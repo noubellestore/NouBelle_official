@@ -1778,8 +1778,13 @@ function updateCart() {
     `;
   });
   
+   
   cartBody.innerHTML = html;
-  document.getElementById('cart-total-price').innerText = 'Rs. ' + total;
+
+const deliveryCharges = 150;
+let grandTotal = total + deliveryCharges;
+
+document.getElementById('cart-total-price').innerText = 'Rs. ' + grandTotal;
 }
 
 function changeQty(index, value) {
