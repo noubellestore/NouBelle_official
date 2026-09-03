@@ -1401,6 +1401,7 @@ footer {
       <div class="card-img-wrap">
         <img src="images/butterfly-long-chain.jpg.jpeg" alt="Butterfly Long Chain Earrings" loading="lazy">
         <div class="card-img-overlay"></div>
+        <div class="card-badge">Sold out</div>
       </div>
       <div class="card-content">
         <div class="card-category">Earrings</div>
@@ -1551,7 +1552,7 @@ footer {
   
      <div class="card reveal">
       <div class="card-img-wrap">
-        <img src="images\trinity-triangle-threaders.jpg.jpeg" alt="Trinity Triangle Threaders" loading="lazy">
+        <img src="images/Trinity Triangle Threaders.jpeg" alt="Trinity Triangle Threaders" loading="lazy">
         <div class="card-img-overlay"></div>
         <div class="card-badge">in stock</div>
       </div>
@@ -1804,7 +1805,7 @@ footer {
           <i class="fas fa-bag-shopping"></i> Add To Cart
         </button>
       </div>
-    </div>
+    </div> 
   <div class="grid">
 </section>
 
@@ -2047,7 +2048,7 @@ function updateCart() {
 
   let html = '';
   let subtotal = 0;
-  const deliveryCharges = 150;
+  const deliveryCharges = 200;
 
   cart.forEach((item, index) => {
     let itemTotal = item.price * item.qty;
@@ -2112,7 +2113,7 @@ function proceedToCheckout() {
     return;
   }
 
-  const deliveryCharges = 150;
+  const deliveryCharges = 200;
   let subtotal = 0;
 
   let orderDetails = cart.map(item => {
