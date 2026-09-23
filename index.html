@@ -1259,29 +1259,6 @@ footer {
   .grid { grid-template-columns: 1fr; }
   .card-img-wrap { height: 280px; }
 }
-.category-bar{
-  display:flex;
-  justify-content:center;
-  gap:15px;
-  margin:30px 0;
-}
-
-.category-btn{
-  background:#5a0b22;
-  color:white;
-  padding:10px 20px;
-  border-radius:30px;
-  text-decoration:none;
-}
-
-.category-btn:hover{
-  background:#7a1233;
-}
-
-html{
-  scroll-behavior:smooth;
-}
-
 </style>
 </head>
 
@@ -1363,14 +1340,6 @@ html{
   </div>
 </div>
 
-<div class="category-bar">
-  <a href="#earrings" class="category-btn">Earrings</a>
-  <a href="#nails" class="category-btn">Nails</a>
-</div>
-
-<section id="earrings">
-  <h2 class="section-title">Earrings Collection</h2>
-
 <!-- Products -->
 <section class="products" id="shop">
   <div class="section-header reveal">
@@ -1401,7 +1370,7 @@ html{
       <div class="card-img-wrap">
         <img src="images/pearl-heart-earings.jpg.jpeg" alt="Pearl Heart Earrings" loading="lazy">
         <div class="card-img-overlay"></div>
-        <div class="card-badge">Sold out</div>
+        <div class="card-badge">New</div>
       </div>
       <div class="card-content">
         <div class="card-category">Earrings</div>
@@ -1432,7 +1401,6 @@ html{
       <div class="card-img-wrap">
         <img src="images/butterfly-long-chain.jpg.jpeg" alt="Butterfly Long Chain Earrings" loading="lazy">
         <div class="card-img-overlay"></div>
-        <div class="card-badge">Sold out</div>
       </div>
       <div class="card-content">
         <div class="card-category">Earrings</div>
@@ -1522,14 +1490,14 @@ html{
 
     <div class="card reveal">
       <div class="card-img-wrap">
-        <img src="images/clover-anklet.jpg.jpeg" alt="Clover Brecelet" loading="lazy">
+        <img src="images/clover-anklet.jpg.jpeg" alt="Clover Anklet" loading="lazy">
         <div class="card-img-overlay"></div>
       </div>
       <div class="card-content">
-        <div class="card-category">Brecelet</div>
-        <h3>Clover Bracelet</h3>
+        <div class="card-category">Anklet</div>
+        <h3>Clover Anklet</h3>
         <div class="price">Rs. 750/-</div>
-        <button class="cart-btn" onclick="addToCart('Clover Brecelet',750,this)">
+        <button class="cart-btn" onclick="addToCart('Clover Anklet',750,this)">
           <i class="fas fa-bag-shopping"></i> Add To Cart
         </button>
       </div>
@@ -1537,14 +1505,29 @@ html{
 
     <div class="card reveal">
       <div class="card-img-wrap">
-        <img src="images/dainty-bloom-anklet.jpg.jpeg" alt="Dainty Bloom Brecelet" loading="lazy">
+        <img src="images/dainty-bloom-anklet.jpg.jpeg" alt="Dainty Bloom Anklet" loading="lazy">
         <div class="card-img-overlay"></div>
       </div>
       <div class="card-content">
-        <div class="card-category">Brecelet</div>
-        <h3>Dainty Bloom Brecelet</h3>
+        <div class="card-category">Anklet</div>
+        <h3>Dainty Bloom Anklet</h3>
         <div class="price">Rs. 750/-</div>
-        <button class="cart-btn" onclick="addToCart('Dainty Bloom Brecelet',750,this)">
+        <button class="cart-btn" onclick="addToCart('Dainty Bloom Anklet',750,this)">
+          <i class="fas fa-bag-shopping"></i> Add To Cart
+        </button>
+      </div>
+    </div>
+
+    <div class="card reveal">
+      <div class="card-img-wrap">
+        <img src="images/aquarius-brecelet-set.jpg.jpeg" alt="Aquarius brecelet set" loading="lazy">
+        <div class="card-img-overlay"></div>
+      </div>
+      <div class="card-content">
+        <div class="card-category">Anklet</div>
+        <h3>Aquarius brecelet set </h3>
+        <div class="price">Rs. 750/-</div>
+        <button class="cart-btn" onclick="addToCart('Aquarius brecelet set ',750,this)">
           <i class="fas fa-bag-shopping"></i> Add To Cart
         </button>
       </div>
@@ -1564,848 +1547,6 @@ html{
         </button>
       </div>
     </div>
-
-    <div class="card reveal">
-      <div class="card-img-wrap">
-        <img src="images/aqua-pearl-tails.jpg.jpeg" alt="Aqua Pearl Tails" loading="lazy">
-        <div class="card-img-overlay"></div>
-        <div class="card-badge">Bestseller</div>
-      </div>
-      <div class="card-content">
-        <div class="card-category">Earrings</div>
-        <h3>Aqua Pearl Tails</h3>
-        <div class="price">Rs. 399/-</div>
-        <button class="cart-btn" onclick="addToCart('Aqua Pearl Tails',399,this)">
-          <i class="fas fa-bag-shopping"></i> Add To Cart
-        </button>
-      </div>
-    </div>
-  
-     <div class="card reveal">
-      <div class="card-img-wrap">
-        <img src="images/trinity-triangle-threaders.jpg.jpeg" alt="Trinity Triangle Threaders" loading="lazy">
-        <div class="card-img-overlay"></div>
-        <div class="card-badge">in stock</div>
-      </div>
-      <div class="card-content">
-        <div class="card-category">Earrings</div>
-        <h3>Trinity Triangle Threaders</h3>
-        <div class="price">Rs. 499/-</div> 
-        <button class="cart-btn" onclick="addToCart('Trinity Triangle Threaders',499,this)">
-          <i class="fas fa-bag-shopping"></i> Add To Cart
-        </button>
-      </div>
-    </div>
-  
-     <div class="card reveal">
-      <div class="card-img-wrap">
-        <img src="images/noin initial pendant.jpg.jpeg" alt="Nion Initial Pendant" loading="lazy">
-        <div class="card-img-overlay"></div>
-      </div>
-      <div class="card-content">
-        <div class="card-category">Locket</div>
-        <h3>Nion Initial Pendant</h3>
-        <div class="price">Rs. 550/-</div>
-        <button class="cart-btn" onclick="addToCart('Nion Initial Pendant',550,this)">
-          <i class="fas fa-bag-shopping"></i> Add To Cart
-        </button>
-      </div>
-    </div>
-
-    <div class="card reveal">
-      <div class="card-img-wrap">
-        <img src="images/heart-strings.jpg.jpeg" alt="Heart strings studs" loading="lazy">
-        <div class="card-img-overlay"></div>
-      </div>
-      <div class="card-content">
-        <div class="card-category">studs</div>
-        <h3>Heart strings studs</h3>
-        <div class="price">Rs. 350/-</div>
-        <button class="cart-btn" onclick="addToCart('Heart strings studs',350,this)">
-          <i class="fas fa-bag-shopping"></i> Add To Cart
-        </button>
-      </div>
-    </div>
-
-     <div class="card reveal">
-      <div class="card-img-wrap">
-        <img src="images/lovelight-studs.jpg.jpeg" alt="Lovelight studs" loading="lazy">
-        <div class="card-img-overlay"></div>
-      </div>
-      <div class="card-content">
-        <div class="card-category">studs</div>
-        <h3> The Lovelight-studs</h3>
-        <div class="price">Rs. 250/-</div>
-        <button class="cart-btn" onclick="addToCart('The Lovelight studs',250,this)">
-          <i class="fas fa-bag-shopping"></i> Add To Cart
-        </button>
-      </div>
-    </div>
-
-     <div class="card reveal">
-      <div class="card-img-wrap">
-        <img src="images/cherie-melody.jpg.jpeg" alt="Cherie Melody" loading="lazy">
-        <div class="card-img-overlay"></div>
-      </div>
-      <div class="card-content">
-        <div class="card-category">studs</div>
-        <h3> The cherie-melody studs</h3>
-        <div class="price">Rs. 250/-</div>
-        <button class="cart-btn" onclick="addToCart('The Cherie Melody Studs',250,this)">
-          <i class="fas fa-bag-shopping"></i> Add To Cart
-        </button>
-      </div>
-    </div>
-
-    <div class="card reveal">
-      <div class="card-img-wrap">
-        <img src="images/golden-swan-broach.jpg.jpeg" alt="Golden Swan Broach" loading="lazy">
-        <div class="card-img-overlay"></div>
-      </div>
-      <div class="card-content">
-        <div class="card-category">Broach</div>
-        <h3> The Golden Swan Broach</h3>
-        <div class="price">Rs. 350/-</div>
-        <button class="cart-btn" onclick="addToCart('The Golden Swan Broach',350,this)">
-          <i class="fas fa-bag-shopping"></i> Add To Cart
-        </button>
-      </div>
-    </div>
-
-    <div class="card reveal">
-      <div class="card-img-wrap">
-        <img src="images/mint-rose-bow-earings.jpg.jpeg" alt="Mint Rose Bow Earings" loading="lazy">
-        <div class="card-img-overlay"></div>
-      </div>
-      <div class="card-content">
-        <div class="card-category">Earings</div>
-        <h3>Mint Rose Bow Earings</h3>
-        <div class="price">Rs. 450/-</div>
-        <button class="cart-btn" onclick="addToCart('The Golden Swan Broach',450,this)">
-          <i class="fas fa-bag-shopping"></i> Add To Cart
-        </button>
-      </div>
-    </div>
-
-    <div class="card reveal">
-      <div class="card-img-wrap">
-        <img src="images/ocean-mist-studs.jpg.jpeg" alt="Ocean Mist Studs" loading="lazy">
-        <div class="card-img-overlay"></div>
-      </div>
-      <div class="card-content">
-        <div class="card-category">Studs</div>
-        <h3>Ocean Mist Studs</h3>
-        <div class="price">Rs. 450/-</div>
-        <button class="cart-btn" onclick="addToCart('Ocean Mist Studs',450,this)">
-          <i class="fas fa-bag-shopping"></i> Add To Cart
-        </button>
-      </div>
-    </div>
-
-     <div class="card reveal">
-      <div class="card-img-wrap">
-        <img src="images/silver-maze-earings.jpg.jpeg" alt="Silver Maze Earings" loading="lazy">
-        <div class="card-img-overlay"></div>
-      </div>
-      <div class="card-content">
-        <div class="card-category">Earings</div>
-        <h3>Silver Maze Earings</h3>
-        <div class="price">Rs. 650/-</div>
-        <button class="cart-btn" onclick="addToCart('Silver Maze Earings',650,this)">
-          <i class="fas fa-bag-shopping"></i> Add To Cart
-        </button>
-      </div>
-    </div>
-
-    <div class="card reveal">
-      <div class="card-img-wrap">
-        <img src="images/urban-luxe-drops.jpg.jpeg" alt="Urban Luxe Drops" loading="lazy">
-        <div class="card-img-overlay"></div>
-      </div>
-      <div class="card-content">
-        <div class="card-category">Earings</div>
-        <h3>Urban Luxe Drops</h3>
-        <div class="price">Rs. 650/-</div>
-        <button class="cart-btn" onclick="addToCart('Urban Luxe Drops',650,this)">
-          <i class="fas fa-bag-shopping"></i> Add To Cart
-        </button>
-      </div>
-    </div>
-
-    <div class="card reveal">
-      <div class="card-img-wrap">
-        <img src="images/aquarius-brecelet-set.jpg.jpeg" alt="Aquarius Brecelet set" loading="lazy">
-        <div class="card-img-overlay"></div>
-      </div>
-      <div class="card-content">
-        <div class="card-category">Brecelet</div>
-        <h3>Aquarius Brecelet set </h3>
-        <div class="price">Rs. 750/-</div>
-        <button class="cart-btn" onclick="addToCart('Aquarius Brecelet set ',750,this)">
-          <i class="fas fa-bag-shopping"></i> Add To Cart
-        </button>
-      </div>
-    </div>
-
-    <div class="card reveal">
-      <div class="card-img-wrap">
-        <img src="images/Aries-brecelet-set.jpg.jpeg" alt="Aries Brecelet set" loading="lazy">
-        <div class="card-img-overlay"></div>
-      </div>
-      <div class="card-content">
-        <div class="card-category">Brecelet</div>
-        <h3>Aries Brecelet set </h3>
-        <div class="price">Rs. 750/-</div>
-        <button class="cart-btn" onclick="addToCart('Aries Brecelet set ',750,this)">
-          <i class="fas fa-bag-shopping"></i> Add To Cart
-        </button>
-      </div>
-    </div>
-
-    <div class="card reveal">
-      <div class="card-img-wrap">
-        <img src="images/flora-earings.jpg.jpeg" alt="The Flora Earings" loading="lazy">
-        <div class="card-img-overlay"></div>
-      </div>
-      <div class="card-content">
-        <div class="card-category">Earings</div>
-        <h3>The Flora Earings </h3>
-        <div class="price">Rs. 350/-</div>
-        <button class="cart-btn" onclick="addToCart('The Flora Earings ',350,this)">
-          <i class="fas fa-bag-shopping"></i> Add To Cart
-        </button>
-      </div>
-    </div>
-
-    <div class="card reveal">
-      <div class="card-img-wrap">
-        <img src="images/heart-brecelet.jpg.jpeg" alt="Heart brecelet " loading="lazy">
-        <div class="card-img-overlay"></div>
-        <div class="card-badge">Sold out</div>
-      </div>
-      <div class="card-content">
-        <div class="card-category">Brecelet</div>
-        <h3>Heart brecelet  </h3>
-        <div class="price">Rs. 350/-</div>
-        <button class="cart-btn" onclick="addToCart('Heart Brecelet ',350,this)">
-          <i class="fas fa-bag-shopping"></i> Add To Cart
-        </button>
-      </div>
-    </div>
-
-    
-    <div class="card reveal">
-      <div class="card-img-wrap">
-        <img src="images/arrow-open-cuff.jpg.jpeg" alt="Arrow open cuff " loading="lazy">
-        <div class="card-img-overlay"></div>
-      </div>
-      <div class="card-content">
-        <div class="card-category">Cuff</div>
-        <h3>Arrow Open Cuff  </h3>
-        <div class="price">Rs. 350/-</div>
-        <button class="cart-btn" onclick="addToCart('Arrow Open Cuff',350,this)">
-          <i class="fas fa-bag-shopping"></i> Add To Cart
-        </button>
-      </div>
-    </div>
-
-    <div class="card reveal">
-      <div class="card-img-wrap">
-        <img src="images/twisted-knot-cuff.jpg.jpeg" alt="Twisted knot cuff " loading="lazy">
-        <div class="card-img-overlay"></div>
-      </div>
-      <div class="card-content">
-        <div class="card-category">Cuff</div>
-        <h3>Twisted Knot Cuff  </h3>
-        <div class="price">Rs. 350/-</div>
-        <button class="cart-btn" onclick="addToCart('Twisted Knot Cuff',350,this)">
-          <i class="fas fa-bag-shopping"></i> Add To Cart
-        </button>
-      </div>
-    </div>
-
-    <div class="card reveal">
-      <div class="card-img-wrap">
-        <img src="images/white-gold-pearl-earings.jpg.jpeg" alt="White Gold Earings" loading="lazy">
-        <div class="card-img-overlay"></div>
-      </div>
-      <div class="card-content">
-        <div class="card-category">Earings</div>
-        <h3>White Gold Earings </h3>
-        <div class="price">Rs. 350/-</div>
-        <button class="cart-btn" onclick="addToCart('White Gold Earings',350,this)">
-          <i class="fas fa-bag-shopping"></i> Add To Cart
-        </button>
-      </div>
-    </div> 
-
-     <div class="card reveal">
-      <div class="card-img-wrap">
-        <img src="images/tree-of-life-brecelet.jpg.jpeg" alt="Tree of Life Brecelet" loading="lazy">
-        <div class="card-img-overlay"></div>
-      </div>
-      <div class="card-content">
-        <div class="card-category">Brecelet</div>
-        <h3>Tree of Life Brecelet</h3>
-        <div class="price">Rs. 450/-</div>
-        <button class="cart-btn" onclick="addToCart('Tree of Life Brecelet',450,this)">
-          <i class="fas fa-bag-shopping"></i> Add To Cart
-        </button>
-      </div>
-    </div> 
-
-    <div class="card reveal">
-      <div class="card-img-wrap">
-        <img src="images/the-silver-loops.jpg.jpeg" alt="The Silver Loops" loading="lazy">
-        <div class="card-img-overlay"></div>
-      </div>
-      <div class="card-content">
-        <div class="card-category">Loops</div>
-        <h3>The Silver Loops</h3>
-        <div class="price">Rs. 450/-</div>
-        <button class="cart-btn" onclick="addToCart('The Silver Loops',450,this)">
-          <i class="fas fa-bag-shopping"></i> Add To Cart
-        </button>
-      </div>
-    </div> 
-
-    <div class="card reveal">
-      <div class="card-img-wrap">
-        <img src="images/lvory-marble-drops.jpg.jpeg" alt="lvory Marble Drops" loading="lazy">
-        <div class="card-img-overlay"></div>
-      </div>
-      <div class="card-content">
-        <div class="card-category">Earings</div>
-        <h3>lvory Marble Drops</h3>
-        <div class="price">Rs. 450/-</div>
-        <button class="cart-btn" onclick="addToCart('lvory Marble Drops',450,this)">
-          <i class="fas fa-bag-shopping"></i> Add To Cart
-        </button>
-      </div>
-    </div> 
-
-    <div class="card reveal">
-      <div class="card-img-wrap">
-        <img src="images/golden-chain-spike-earings.jpg.jpeg" alt="Golden Chain Spike Earings" loading="lazy">
-        <div class="card-img-overlay"></div>
-      </div>
-      <div class="card-content">
-        <div class="card-category">Earings</div>
-        <h3>Golden Chain Spike Earings</h3>
-        <div class="price">Rs. 450/-</div>
-        <button class="cart-btn" onclick="addToCart('Golden Chain Spike Earings',450,this)">
-          <i class="fas fa-bag-shopping"></i> Add To Cart
-        </button>
-      </div>
-    </div> 
-
-     <div class="card reveal">
-      <div class="card-img-wrap">
-        <img src="images/blush-marble-hoops.jpg.jpeg" alt="Blush Marble Hoops" loading="lazy">
-        <div class="card-img-overlay"></div>
-      </div>
-      <div class="card-content">
-        <div class="card-category">Earings</div>
-        <h3>"Blush Marble Hoops</h3>
-        <div class="price">Rs. 450/-</div>
-        <button class="cart-btn" onclick="addToCart('Blush Marble Hoops',450,this)">
-          <i class="fas fa-bag-shopping"></i> Add To Cart
-        </button>
-      </div>
-    </div> 
-
-     <div class="card reveal">
-      <div class="card-img-wrap">
-        <img src="images/evil-eye-charm.jpg.jpeg" alt="Evil Eye Charm Cuff" loading="lazy">
-        <div class="card-img-overlay"></div>
-      </div>
-      <div class="card-content">
-        <div class="card-category">Cuff</div>
-        <h3>"Evil Eye Charm Cuff"</h3>
-        <div class="price">Rs. 350/-</div>
-        <button class="cart-btn" onclick="addToCart('Evil Eye Charm Cuff',350,this)">
-          <i class="fas fa-bag-shopping"></i> Add To Cart
-        </button>
-      </div>
-    </div> 
-
-     <div class="card reveal">
-      <div class="card-img-wrap">
-        <img src="images/customize-name-locket.jpg.jpeg" alt="customize Name Locket" loading="lazy">
-        <div class="card-img-overlay"></div>
-      </div>
-      <div class="card-content">
-        <div class="card-category">Locket</div>
-        <h3>"Customize Name Locket"</h3>
-        <div class="price">Rs.1300/-</div>
-        <button class="cart-btn" onclick="addToCart('Customize Name Locket',1300,this)">
-          <i class="fas fa-bag-shopping"></i> Add To Cart
-        </button>
-      </div>
-    </div> 
-
-    <div class="card reveal">
-      <div class="card-img-wrap">
-        <img src="images/honey-heart-set.jpg (2).jpeg" alt="honey-heart-set" loading="lazy">
-        <div class="card-img-overlay"></div>
-      </div>
-      <div class="card-content">
-        <div class="card-category">Locket Set</div>
-        <h3>"Honey Heart Set"</h3>
-        <div class="price">Rs.999/-</div>
-        <button class="cart-btn" onclick="addToCart('Honey Heart Set',999,this)">
-          <i class="fas fa-bag-shopping"></i> Add To Cart
-        </button>
-      </div>
-    </div> 
-
-    <div class="card reveal">
-      <div class="card-img-wrap">
-        <img src="images/Marble-T-initial-locket.jpg.jpeg" alt="Marbla T Initial Locket" loading="lazy">
-        <div class="card-img-overlay"></div>
-      </div>
-      <div class="card-content">
-        <div class="card-category">Locket</div>
-        <h3>"Marbla T Initial Locket"</h3>
-        <div class="price">Rs.750/-</div>
-        <button class="cart-btn" onclick="addToCart('Marbla T Initial Locket',750,this)">
-          <i class="fas fa-bag-shopping"></i> Add To Cart
-        </button>
-      </div>
-    </div> 
-
-     <div class="card reveal">
-      <div class="card-img-wrap">
-        <img src="images/midnight-aura.jpg.jpeg" alt="midnight-aura earings" loading="lazy">
-        <div class="card-img-overlay"></div>
-      </div>
-      <div class="card-content">
-        <div class="card-category">Earings</div>
-        <h3>"Midnight Aura Earings"</h3>
-        <div class="price">Rs.450/-</div>
-        <button class="cart-btn" onclick="addToCart('Midnight Aura Earings',450,this)">
-          <i class="fas fa-bag-shopping"></i> Add To Cart
-        </button>
-      </div>
-    </div> 
-
-    <div class="card reveal">
-      <div class="card-img-wrap">
-        <img src="images/owl-studs.jpg.jpeg" alt="owl studs" loading="lazy">
-        <div class="card-img-overlay"></div>
-      </div>
-      <div class="card-content">
-        <div class="card-category">Studs</div>
-        <h3>"owl-studs(in black and white)"</h3>
-        <div class="price">Rs.450/-</div>
-        <button class="cart-btn" onclick="addToCart('owl studs',450,this)">
-          <i class="fas fa-bag-shopping"></i> Add To Cart
-        </button>
-      </div>
-    </div> 
-
-    <div class="card reveal">
-      <div class="card-img-wrap">
-        <img src="images/Moonlight-marble.jpg.jpeg" alt="moonlight marble earings" loading="lazy">
-        <div class="card-img-overlay"></div>
-      </div>
-      <div class="card-content">
-        <div class="card-category">earings</div>
-        <h3>"Moonligh Marble earings"</h3>
-        <div class="price">Rs.450/-</div>
-        <button class="cart-btn" onclick="addToCart('moonlight marble earings',450,this)">
-          <i class="fas fa-bag-shopping"></i> Add To Cart
-        </button>
-      </div>
-    </div> 
-
-    <div class="card reveal">
-      <div class="card-img-wrap">
-        <img src="images/ocean-cat.jpg.jpeg" alt="ocean cat" loading="lazy">
-        <div class="card-img-overlay"></div>
-      </div>
-      <div class="card-content">
-        <div class="card-category">Studs</div>
-        <h3>"Ocean cat studs"</h3>
-        <div class="price">Rs.350/-</div>
-        <button class="cart-btn" onclick="addToCart('Ocean cat',350,this)">
-          <i class="fas fa-bag-shopping"></i> Add To Cart
-        </button>
-      </div>
-    </div> 
-
-    <div class="card reveal">
-      <div class="card-img-wrap">
-        <img src="images/pearl-charm-pendant.jpg.jpeg" alt="Pearl Charm Locket" loading="lazy">
-        <div class="card-img-overlay"></div>
-      </div>
-      <div class="card-content">
-        <div class="card-category">locket</div>
-        <h3>"pearl charm locket"</h3>
-        <div class="price">Rs.750/-</div>
-        <button class="cart-btn" onclick="addToCart('pearl charm locket',750,this)">
-          <i class="fas fa-bag-shopping"></i> Add To Cart
-        </button>
-      </div>
-    </div> 
-
-    <div class="card reveal">
-      <div class="card-img-wrap">
-        <img src="images/white-gold-clover-earing.jpg.jpeg" alt="white gold clover earings" loading="lazy">
-        <div class="card-img-overlay"></div>
-      </div>
-      <div class="card-content">
-        <div class="card-category">Earings</div>
-        <h3>"White Gold Clover Earings"</h3>
-        <div class="price">Rs.550/-</div>
-        <button class="cart-btn" onclick="addToCart('white gold clover earings',550,this)">
-          <i class="fas fa-bag-shopping"></i> Add To Cart
-        </button>
-      </div>
-    </div> 
-
-     <div class="card reveal">
-      <div class="card-img-wrap">
-        <img src="images/golden-butterfly-studs.jpg.jpeg" alt="golden-butterfly-studs" loading="lazy">
-        <div class="card-img-overlay"></div>
-      </div>
-      <div class="card-content">
-        <div class="card-category">Studs</div>
-        <h3>"Golden Butterfly Studs"</h3>
-        <div class="price">Rs.250/-</div>
-        <button class="cart-btn" onclick="addToCart('Golden Butterfly Studs',250,this)">
-          <i class="fas fa-bag-shopping"></i> Add To Cart
-        </button>
-      </div>
-    </div> 
-      
-      <div class="card reveal">
-      <div class="card-img-wrap">
-        <img src="images/eclipse-drop.jpg.jpeg" alt="Eclipse Drop studs" loading="lazy">
-        <div class="card-img-overlay"></div>
-      </div>
-      <div class="card-content">
-        <div class="card-category">Studs</div>
-        <h3>"Eclipse Drop studs"</h3>
-        <div class="price">Rs.250/-</div>
-        <button class="cart-btn" onclick="addToCart('Eclipse Drop studs',250,this)">
-          <i class="fas fa-bag-shopping"></i> Add To Cart
-        </button>
-      </div>
-    </div> 
-
-     <div class="card reveal">
-      <div class="card-img-wrap">
-        <img src="images/silver-rain-earings.jpg.jpeg" alt="Silver Rain Earings" loading="lazy">
-        <div class="card-img-overlay"></div>
-      </div>
-      <div class="card-content">
-        <div class="card-category">Earings</div>
-        <h3>"Silver Rain Earings"</h3>
-        <div class="price">Rs.550/-</div>
-        <button class="cart-btn" onclick="addToCart('Silver Rain Earings',550,this)">
-          <i class="fas fa-bag-shopping"></i> Add To Cart
-        </button>
-      </div>
-    </div> 
-
-     <div class="card reveal">
-      <div class="card-img-wrap">
-        <img src="images/amour-heart-studs.jpg.jpeg" alt="Amour Heart Studs" loading="lazy">
-        <div class="card-img-overlay"></div>
-      </div>
-      <div class="card-content">
-        <div class="card-category">Studs</div>
-        <h3>"Amour Heart Studs"</h3>
-        <div class="price">Rs.250/-</div>
-        <button class="cart-btn" onclick="addToCart('Amour Heart Studs',250,this)">
-          <i class="fas fa-bag-shopping"></i> Add To Cart
-        </button>
-      </div>
-    </div> 
-
-     <div class="card reveal">
-      <div class="card-img-wrap">
-        <img src="images/golden-star-studs.jpg.jpeg" alt="golden star studs" loading="lazy">
-        <div class="card-img-overlay"></div>
-      </div>
-      <div class="card-content">
-        <div class="card-category">Studs</div>
-        <h3>"Golden Star Studs"</h3>
-        <div class="price">Rs.250/-</div>
-        <button class="cart-btn" onclick="addToCart('Golden Star Studs',250,this)">
-          <i class="fas fa-bag-shopping"></i> Add To Cart
-        </button>
-      </div>
-    </div> 
-
-     <div class="card reveal">
-      <div class="card-img-wrap">
-        <img src="images/golden-clover-studs.jpg.jpeg" alt="golden clover studs" loading="lazy">
-        <div class="card-img-overlay"></div>
-      </div>
-      <div class="card-content">
-        <div class="card-category">Studs</div>
-        <h3>"Golden Clover Studs"</h3>
-        <div class="price">Rs.350/-</div>
-        <button class="cart-btn" onclick="addToCart('Golden Clover Studs',350,this)">
-          <i class="fas fa-bag-shopping"></i> Add To Cart
-        </button>
-      </div>
-    </div> 
-
-     <div class="card reveal">
-      <div class="card-img-wrap">
-        <img src="images/emerald-clover-drops.jpg.jpeg" alt="emerland clover studs" loading="lazy">
-        <div class="card-img-overlay"></div>
-      </div>
-      <div class="card-content">
-        <div class="card-category">Studs</div>
-        <h3>"Emerland Clover Studs"</h3>
-        <div class="price">Rs.350/-</div>
-        <button class="cart-btn" onclick="addToCart('Emerland Clover Studs',350,this)">
-          <i class="fas fa-bag-shopping"></i> Add To Cart
-        </button>
-      </div>
-    </div> 
-
-      <div class="card reveal">
-      <div class="card-img-wrap">
-        <img src="images/celeste-pearls-studs.jpg.jpeg" alt="Celeste pearl studs" loading="lazy">
-        <div class="card-img-overlay"></div>
-      </div>
-      <div class="card-content">
-        <div class="card-category">Studs</div>
-        <h3>"Celeste Pearl Studs"</h3>
-        <div class="price">Rs.350/-</div>
-        <button class="cart-btn" onclick="addToCart('Celeste Pearl Studs',350,this)">
-          <i class="fas fa-bag-shopping"></i> Add To Cart
-        </button>
-      </div>
-    </div> 
-
-     <div class="card reveal">
-      <div class="card-img-wrap">
-        <img src="images/crystal-dou-pendant.jpg.png" alt="Crystal Dou Pendant" loading="lazy">
-        <div class="card-img-overlay"></div>
-      </div>
-      <div class="card-content">
-        <div class="card-category">pendant</div>
-        <h3>"Crystal Dou Pendant"</h3>
-        <div class="price">Rs.1000/-</div>
-        <button class="cart-btn" onclick="addToCart('Crystal Dou Pendant',1000,this)">
-          <i class="fas fa-bag-shopping"></i> Add To Cart
-        </button>
-      </div>
-    </div> 
-
-         <div class="card reveal">
-      <div class="card-img-wrap">
-        <img src="images/cotton-candy-crown-studs.jpg.jpeg" alt="Cotton candy crown studs" loading="lazy">
-        <div class="card-img-overlay"></div>
-      </div>
-      <div class="card-content">
-        <div class="card-category">Studs</div>
-        <h3>"Cotton candy crown studs"</h3>
-        <div class="price">Rs.350/-</div>
-        <button class="cart-btn" onclick="addToCart('Cotton candy crown studs',350,this)">
-          <i class="fas fa-bag-shopping"></i> Add To Cart
-        </button>
-      </div>
-    </div>  
-    </section>
-    <section id="nails">
-
-<!-- Nails product -->
-<section id="nails">
-
-  <h2 class="section-title">Press-On Nails</h2>
-
-  <div class="grid">
-
-    <div class="card reveal">
-      <div class="card-img-wrap">
-        <img src="images/moonlit-sage.jpg.jpeg" alt="Moonlit Sage">
-        <div class="card-img-overlay"></div>
-      </div>
-      <div class="card-content">
-        <div class="card-category">Press-On</div>
-        <h3>Moonlit Sage</h3>
-        <div class="price">Rs.1000/-</div>
-        <button class="cart-btn" onclick="addToCart('Moonlit Sage Press on',1000,this)">
-          <i class="fas fa-bag-shopping"></i> Add To Cart
-        </button>
-      </div>
-    </div>
-
-     <div class="card reveal">
-      <div class="card-img-wrap">
-        <img src="images/baby-pink-jpg.jpeg" alt="Baby Pink Press-on">
-        <div class="card-img-overlay"></div>
-      </div>
-      <div class="card-content">
-        <div class="card-category">Press-On</div>
-        <h3>Baby Pink Press-on</h3>
-        <div class="price">Rs.1000/-</div>
-        <button class="cart-btn" onclick="addToCart('Baby Pink Press-0n',1000,this)">
-          <i class="fas fa-bag-shopping"></i> Add To Cart
-        </button>
-      </div>
-    </div>
-
-       <div class="card reveal">
-      <div class="card-img-wrap">
-        <img src="images/coffee-cream.jpg.jpeg" alt="Coffee Cream Press-on">
-        <div class="card-img-overlay"></div>
-      </div>
-      <div class="card-content">
-        <div class="card-category">Press-On</div>
-        <h3>Coffee Cream Press-on</h3>
-        <div class="price">Rs.1000/-</div>
-        <button class="cart-btn" onclick="addToCart('Coffee Cream Press-0n',1000,this)">
-          <i class="fas fa-bag-shopping"></i> Add To Cart
-        </button>
-      </div>
-    </div>
- 
-    
-       <div class="card reveal">
-      <div class="card-img-wrap">
-        <img src="images/black-sage.jpg.jpeg" alt="Black Sage Press-on">
-        <div class="card-img-overlay"></div>
-      </div>
-      <div class="card-content">
-        <div class="card-category">Press-On</div>
-        <h3>Black Sage Press-on</h3>
-        <div class="price">Rs.1000/-</div>
-        <button class="cart-btn" onclick="addToCart('Black Sage Press-0n',1000,this)">
-          <i class="fas fa-bag-shopping"></i> Add To Cart
-        </button>
-      </div>
-    </div>
-
-    
-       <div class="card reveal">
-      <div class="card-img-wrap">
-        <img src="images/cherry-red.jpg.jpg" alt="Cherry Red Press-on">
-        <div class="card-img-overlay"></div>
-      </div>
-      <div class="card-content">
-        <div class="card-category">Press-On</div>
-        <h3>Cherry Red Press-on</h3>
-        <div class="price">Rs.1000/-</div>
-        <button class="cart-btn" onclick="addToCart('Cherry Red Press-0n',1000,this)">
-          <i class="fas fa-bag-shopping"></i> Add To Cart
-        </button>
-      </div>
-    </div>
-      
-    
-       <div class="card reveal">
-      <div class="card-img-wrap">
-        <img src="images/glitered-grey-jpg.jpeg" alt="Glitered grey Press On">
-        <div class="card-img-overlay"></div>
-      </div>
-      <div class="card-content">
-        <div class="card-category">Press-On</div>
-        <h3>Glitered grey Press-on</h3>
-        <div class="price">Rs.1000/-</div>
-        <button class="cart-btn" onclick="addToCart('Glitered grey Press-0n',1000,this)">
-          <i class="fas fa-bag-shopping"></i> Add To Cart
-        </button>
-      </div>
-    </div>
-
-    <div class="card reveal">
-      <div class="card-img-wrap">
-        <img src="images/golden-mocha.jpg.jpeg" alt="Golden Mocha Press On">
-        <div class="card-img-overlay"></div>
-      </div>
-      <div class="card-content">
-        <div class="card-category">Press-On</div>
-        <h3>Golden Mocha Press-on</h3>
-        <div class="price">Rs.1000/-</div>
-        <button class="cart-btn" onclick="addToCart('Golden Mocha Press-0n',1000,this)">
-          <i class="fas fa-bag-shopping"></i> Add To Cart
-        </button>
-      </div>
-    </div>
-
-  <div class="card reveal">
-      <div class="card-img-wrap">
-        <img src="images/grey-sage.jpg.jpeg" alt="Grey Sage Press On">
-        <div class="card-img-overlay"></div>
-      </div>
-      <div class="card-content">
-        <div class="card-category">Press-On</div>
-        <h3>Grey Sage Press-on</h3>
-        <div class="price">Rs.1000/-</div>
-        <button class="cart-btn" onclick="addToCart('Grey Sage Press-0n',1000,this)">
-          <i class="fas fa-bag-shopping"></i> Add To Cart
-        </button>
-      </div>
-    </div>
- 
-    <div class="card reveal">
-      <div class="card-img-wrap">
-        <img src="images/tea-pink.jpg.jpeg" alt="Tea Pink Press On">
-        <div class="card-img-overlay"></div>
-      </div>
-      <div class="card-content">
-        <div class="card-category">Press-On</div>
-        <h3>Tea Pink Press-on</h3>
-        <div class="price">Rs.1000/-</div>
-        <button class="cart-btn" onclick="addToCart('Tea Pink Press-0n',1000,this)">
-          <i class="fas fa-bag-shopping"></i> Add To Cart
-        </button>
-      </div>
-    </div>
-
-    <div class="card reveal">
-      <div class="card-img-wrap">
-        <img src="images/rose-red.jpg.jpeg" alt="Rose Red Press On">
-        <div class="card-img-overlay"></div>
-      </div>
-      <div class="card-content">
-        <div class="card-category">Press-On</div>
-        <h3> Rose Red Press-on</h3>
-        <div class="price">Rs.1000/-</div>
-        <button class="cart-btn" onclick="addToCart('Rose Red  Press-0n',1000,this)">
-          <i class="fas fa-bag-shopping"></i> Add To Cart
-        </button>
-      </div>
-    </div>
-
-    <div class="card reveal">
-      <div class="card-img-wrap">
-        <img src="images/white-sage.jpg.jpeg" alt="White Sage Press On">
-        <div class="card-img-overlay"></div>
-      </div>
-      <div class="card-content">
-        <div class="card-category">Press-On</div>
-        <h3> White Sage Press-on</h3>
-        <div class="price">Rs.1000/-</div>
-        <button class="cart-btn" onclick="addToCart('White Sage Press-0n',1000,this)">
-          <i class="fas fa-bag-shopping"></i> Add To Cart
-        </button>
-      </div>
-    </div>
-
-        <div class="card reveal">
-      <div class="card-img-wrap">
-        <img src="images/zink-sage.jpg.jpeg" alt="Zink Sage Press On">
-        <div class="card-img-overlay"></div>
-      </div>
-      <div class="card-content">
-        <div class="card-category">Press-On</div>
-        <h3>Zink Sage Press-on</h3>
-        <div class="price">Rs.1000/-</div>
-        <button class="cart-btn" onclick="addToCart('Zink Sage Press-0n',1000,this)">
-          <i class="fas fa-bag-shopping"></i> Add To Cart
-        </button>
-      </div>
-    </div>
-
   </div>
 </section>
 
@@ -2566,25 +1707,15 @@ html{
     </div>
   </div>
   <div class="cart-footer" id="cartFooter" style="display:none">
--
-  <div style="color:red; font-size:18px;">
-    Delivery Charges: Rs. 200
-</div>
-  </div>
-
-  <div class="cart-total">
-  <span class="cart-total-label">Delivery Charges</span>
-  <span class="cart-total-price">Rs. 200</span>
-</div>
-
-<div class="cart-total">
-  <span class="cart-total-label">Total</span>
-  <span class="cart-total-price" id="cart-total-price">Rs. 0</span>
-</div>
+    <div class="cart-total">
+      <span class="cart-total-label">Total</span>
+      <span class="cart-total-price" id="cart-total-price">Rs. 0</span>
+    </div>
     <div class="cart-actions">
-      <button type="button" class="checkout-btn" onclick="proceedToCheckout()">
-  <i class="fas fa-lock"></i> Proceed to Checkout
-</button>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSdvxCVbiVHnr2rpAGOxFYeox9Wqs4i5mLMN7QFKu75hOcS7ag/viewform?usp=publish-editor"
+        target="_blank" class="checkout-btn">
+        <i class="fas fa-lock"></i> Proceed to Checkout
+      </a>
       <button class="clear-cart-btn" onclick="clearCart()">
         <i class="fas fa-trash-can"></i> Clear Bag
       </button>
@@ -2606,20 +1737,18 @@ let cart = [];
 
 function addToCart(name, price, btnEl) {
   let existing = cart.find(item => item.name === name);
-
   if (existing) {
     existing.qty++;
   } else {
     cart.push({ name, price, qty: 1 });
   }
-
   updateCart();
   showToast(name + ' added to bag');
-
+  
+  // Button feedback
   if (btnEl) {
     btnEl.classList.add('added');
     btnEl.innerHTML = '<i class="fas fa-check"></i> Added';
-
     setTimeout(() => {
       btnEl.classList.remove('added');
       btnEl.innerHTML = '<i class="fas fa-bag-shopping"></i> Add To Cart';
@@ -2630,67 +1759,52 @@ function addToCart(name, price, btnEl) {
 function updateCart() {
   let totalItems = cart.reduce((sum, item) => sum + item.qty, 0);
   document.getElementById('cart-count').innerText = totalItems;
-
+  
   let cartBody = document.getElementById('cart-items');
   let cartFooter = document.getElementById('cartFooter');
-
+  
   if (cart.length === 0) {
-    cartBody.innerHTML =
-      '<div class="cart-empty"><i class="fas fa-bag-shopping"></i><p>Your bag is empty</p></div>';
-
+    cartBody.innerHTML = '<div class="cart-empty"><i class="fas fa-bag-shopping"></i><p>Your bag is empty</p></div>';
     cartFooter.style.display = 'none';
-
-    document.getElementById('cart-total-price').innerText = 'Rs. 0';
     return;
   }
-
+  
   cartFooter.style.display = 'block';
-
   let html = '';
-  let subtotal = 0;
-  const deliveryCharges = 200;
-
+  let total = 0;
+  
   cart.forEach((item, index) => {
-    let itemTotal = item.price * item.qty;
-    subtotal += itemTotal;
-
+    total += item.price * item.qty;
     html += `
       <div class="cart-item">
         <div class="cart-item-info">
           <div class="cart-item-name">${item.name}</div>
           <div class="cart-item-price">Rs. ${item.price}</div>
-
           <div class="cart-item-qty">
             <button class="qty-btn" onclick="changeQty(${index},-1)">−</button>
             <span>${item.qty}</span>
             <button class="qty-btn" onclick="changeQty(${index},1)">+</button>
           </div>
         </div>
-
-        <button class="cart-item-remove"
-          onclick="removeItem(${index})"
-          aria-label="Remove">
+        <button class="cart-item-remove" onclick="removeItem(${index})" aria-label="Remove">
           <i class="fas fa-xmark"></i>
         </button>
       </div>
     `;
   });
-
+  
+   
   cartBody.innerHTML = html;
 
-  let grandTotal = subtotal + deliveryCharges;
+const deliveryCharges = 150;
+let grandTotal = total + deliveryCharges;
 
-  document.getElementById('cart-total-price').innerText =
-    'Rs. ' + grandTotal;
+document.getElementById('cart-total-price').innerText = 'Rs. ' + grandTotal;
 }
 
 function changeQty(index, value) {
   cart[index].qty += value;
-
-  if (cart[index].qty <= 0) {
-    cart.splice(index, 1);
-  }
-
+  if (cart[index].qty <= 0) cart.splice(index, 1);
   updateCart();
 }
 
@@ -2705,47 +1819,10 @@ function clearCart() {
   showToast('Bag cleared');
 }
 
-// ===== GOOGLE FORM CHECKOUT =====
-function proceedToCheckout() {
-
-  if (cart.length === 0) {
-    showToast('Please add a product to your bag first');
-    return;
-  }
-
-  const deliveryCharges = 200;
-  let subtotal = 0;
-
-  let orderDetails = cart.map(item => {
-
-    let itemTotal = item.price * item.qty;
-    subtotal += itemTotal;
-
-    return `${item.name} × ${item.qty} — Rs. ${itemTotal}`;
-
-  }).join(' | ');
-
-  const grandTotal = subtotal + deliveryCharges;
-
-  orderDetails +=
-    ` | Delivery: Rs. ${deliveryCharges} | Grand Total: Rs. ${grandTotal}`;
-
-  const formURL =
-    'https://docs.google.com/forms/d/e/1FAIpQLSdvxCVbiVHnr2rpAGOxFYeox9Wqs4i5mLMN7QFKu75hOcS7ag/viewform?usp=pp_url'
-    + '&entry.1156762918='
-    + encodeURIComponent(orderDetails);
-
-  window.open(formURL, '_blank');
-}
-
 function toggleCart() {
   document.getElementById('cartBox').classList.toggle('active');
   document.getElementById('cartOverlay').classList.toggle('active');
-
-  document.body.style.overflow =
-    document.getElementById('cartBox').classList.contains('active')
-      ? 'hidden'
-      : '';
+  document.body.style.overflow = document.getElementById('cartBox').classList.contains('active') ? 'hidden' : '';
 }
 
 // ===== TOAST NOTIFICATIONS =====
