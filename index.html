@@ -1259,6 +1259,29 @@ footer {
   .grid { grid-template-columns: 1fr; }
   .card-img-wrap { height: 280px; }
 }
+.category-bar{
+  display:flex;
+  justify-content:center;
+  gap:15px;
+  margin:30px 0;
+}
+
+.category-btn{
+  background:#5a0b22;
+  color:white;
+  padding:10px 20px;
+  border-radius:30px;
+  text-decoration:none;
+}
+
+.category-btn:hover{
+  background:#7a1233;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
 </style>
 </head>
 
@@ -1339,6 +1362,14 @@ footer {
     <span>Easy Returns</span>
   </div>
 </div>
+
+<div class="category-bar">
+  <a href="#earrings" class="category-btn">Earrings</a>
+  <a href="#nails" class="category-btn">Nails</a>
+</div>
+
+<section id="earrings">
+  <h2 class="section-title">Earrings Collection</h2>
 
 <!-- Products -->
 <section class="products" id="shop">
@@ -1750,6 +1781,7 @@ footer {
       <div class="card-img-wrap">
         <img src="images/heart-brecelet.jpg.jpeg" alt="Heart brecelet " loading="lazy">
         <div class="card-img-overlay"></div>
+        <div class="card-badge">Sold out</div>
       </div>
       <div class="card-content">
         <div class="card-category">Brecelet</div>
@@ -2152,6 +2184,21 @@ footer {
       </div>
     </div> 
 
+     <div class="card reveal">
+      <div class="card-img-wrap">
+        <img src="images/crystal-dou-pendant.jpg.png" alt="Crystal Dou Pendant" loading="lazy">
+        <div class="card-img-overlay"></div>
+      </div>
+      <div class="card-content">
+        <div class="card-category">pendant</div>
+        <h3>"Crystal Dou Pendant"</h3>
+        <div class="price">Rs.1000/-</div>
+        <button class="cart-btn" onclick="addToCart('Crystal Dou Pendant',1000,this)">
+          <i class="fas fa-bag-shopping"></i> Add To Cart
+        </button>
+      </div>
+    </div> 
+
          <div class="card reveal">
       <div class="card-img-wrap">
         <img src="images/cotton-candy-crown-studs.jpg.jpeg" alt="Cotton candy crown studs" loading="lazy">
@@ -2166,8 +2213,200 @@ footer {
         </button>
       </div>
     </div>  
+    </section>
+    <section id="nails">
+
+<!-- Nails product -->
+<section id="nails">
+
+  <h2 class="section-title">Press-On Nails</h2>
 
   <div class="grid">
+
+    <div class="card reveal">
+      <div class="card-img-wrap">
+        <img src="images/moonlit-sage.jpg.jpeg" alt="Moonlit Sage">
+        <div class="card-img-overlay"></div>
+      </div>
+      <div class="card-content">
+        <div class="card-category">Press-On</div>
+        <h3>Moonlit Sage</h3>
+        <div class="price">Rs.1000/-</div>
+        <button class="cart-btn" onclick="addToCart('Moonlit Sage Press on',1000,this)">
+          <i class="fas fa-bag-shopping"></i> Add To Cart
+        </button>
+      </div>
+    </div>
+
+     <div class="card reveal">
+      <div class="card-img-wrap">
+        <img src="images/baby-pink-jpg.jpeg" alt="Baby Pink Press-on">
+        <div class="card-img-overlay"></div>
+      </div>
+      <div class="card-content">
+        <div class="card-category">Press-On</div>
+        <h3>Baby Pink Press-on</h3>
+        <div class="price">Rs.1000/-</div>
+        <button class="cart-btn" onclick="addToCart('Baby Pink Press-0n',1000,this)">
+          <i class="fas fa-bag-shopping"></i> Add To Cart
+        </button>
+      </div>
+    </div>
+
+       <div class="card reveal">
+      <div class="card-img-wrap">
+        <img src="images/coffee-cream.jpg.jpeg" alt="Coffee Cream Press-on">
+        <div class="card-img-overlay"></div>
+      </div>
+      <div class="card-content">
+        <div class="card-category">Press-On</div>
+        <h3>Coffee Cream Press-on</h3>
+        <div class="price">Rs.1000/-</div>
+        <button class="cart-btn" onclick="addToCart('Coffee Cream Press-0n',1000,this)">
+          <i class="fas fa-bag-shopping"></i> Add To Cart
+        </button>
+      </div>
+    </div>
+ 
+    
+       <div class="card reveal">
+      <div class="card-img-wrap">
+        <img src="images/black-sage.jpg.jpeg" alt="Black Sage Press-on">
+        <div class="card-img-overlay"></div>
+      </div>
+      <div class="card-content">
+        <div class="card-category">Press-On</div>
+        <h3>Black Sage Press-on</h3>
+        <div class="price">Rs.1000/-</div>
+        <button class="cart-btn" onclick="addToCart('Black Sage Press-0n',1000,this)">
+          <i class="fas fa-bag-shopping"></i> Add To Cart
+        </button>
+      </div>
+    </div>
+
+    
+       <div class="card reveal">
+      <div class="card-img-wrap">
+        <img src="images/cherry-red.jpg.jpg" alt="Cherry Red Press-on">
+        <div class="card-img-overlay"></div>
+      </div>
+      <div class="card-content">
+        <div class="card-category">Press-On</div>
+        <h3>Cherry Red Press-on</h3>
+        <div class="price">Rs.1000/-</div>
+        <button class="cart-btn" onclick="addToCart('Cherry Red Press-0n',1000,this)">
+          <i class="fas fa-bag-shopping"></i> Add To Cart
+        </button>
+      </div>
+    </div>
+      
+    
+       <div class="card reveal">
+      <div class="card-img-wrap">
+        <img src="images/glitered-grey-jpg.jpeg" alt="Glitered grey Press On">
+        <div class="card-img-overlay"></div>
+      </div>
+      <div class="card-content">
+        <div class="card-category">Press-On</div>
+        <h3>Glitered grey Press-on</h3>
+        <div class="price">Rs.1000/-</div>
+        <button class="cart-btn" onclick="addToCart('Glitered grey Press-0n',1000,this)">
+          <i class="fas fa-bag-shopping"></i> Add To Cart
+        </button>
+      </div>
+    </div>
+
+    <div class="card reveal">
+      <div class="card-img-wrap">
+        <img src="images/golden-mocha.jpg.jpeg" alt="Golden Mocha Press On">
+        <div class="card-img-overlay"></div>
+      </div>
+      <div class="card-content">
+        <div class="card-category">Press-On</div>
+        <h3>Golden Mocha Press-on</h3>
+        <div class="price">Rs.1000/-</div>
+        <button class="cart-btn" onclick="addToCart('Golden Mocha Press-0n',1000,this)">
+          <i class="fas fa-bag-shopping"></i> Add To Cart
+        </button>
+      </div>
+    </div>
+
+  <div class="card reveal">
+      <div class="card-img-wrap">
+        <img src="images/grey-sage.jpg.jpeg" alt="Grey Sage Press On">
+        <div class="card-img-overlay"></div>
+      </div>
+      <div class="card-content">
+        <div class="card-category">Press-On</div>
+        <h3>Grey Sage Press-on</h3>
+        <div class="price">Rs.1000/-</div>
+        <button class="cart-btn" onclick="addToCart('Grey Sage Press-0n',1000,this)">
+          <i class="fas fa-bag-shopping"></i> Add To Cart
+        </button>
+      </div>
+    </div>
+ 
+    <div class="card reveal">
+      <div class="card-img-wrap">
+        <img src="images/tea-pink.jpg.jpeg" alt="Tea Pink Press On">
+        <div class="card-img-overlay"></div>
+      </div>
+      <div class="card-content">
+        <div class="card-category">Press-On</div>
+        <h3>Tea Pink Press-on</h3>
+        <div class="price">Rs.1000/-</div>
+        <button class="cart-btn" onclick="addToCart('Tea Pink Press-0n',1000,this)">
+          <i class="fas fa-bag-shopping"></i> Add To Cart
+        </button>
+      </div>
+    </div>
+
+    <div class="card reveal">
+      <div class="card-img-wrap">
+        <img src="images/rose-red.jpg.jpeg" alt="Rose Red Press On">
+        <div class="card-img-overlay"></div>
+      </div>
+      <div class="card-content">
+        <div class="card-category">Press-On</div>
+        <h3> Rose Red Press-on</h3>
+        <div class="price">Rs.1000/-</div>
+        <button class="cart-btn" onclick="addToCart('Rose Red  Press-0n',1000,this)">
+          <i class="fas fa-bag-shopping"></i> Add To Cart
+        </button>
+      </div>
+    </div>
+
+    <div class="card reveal">
+      <div class="card-img-wrap">
+        <img src="images/white-sage.jpg.jpeg" alt="White Sage Press On">
+        <div class="card-img-overlay"></div>
+      </div>
+      <div class="card-content">
+        <div class="card-category">Press-On</div>
+        <h3> White Sage Press-on</h3>
+        <div class="price">Rs.1000/-</div>
+        <button class="cart-btn" onclick="addToCart('White Sage Press-0n',1000,this)">
+          <i class="fas fa-bag-shopping"></i> Add To Cart
+        </button>
+      </div>
+    </div>
+
+        <div class="card reveal">
+      <div class="card-img-wrap">
+        <img src="images/zink-sage.jpg.jpeg" alt="Zink Sage Press On">
+        <div class="card-img-overlay"></div>
+      </div>
+      <div class="card-content">
+        <div class="card-category">Press-On</div>
+        <h3>Zink Sage Press-on</h3>
+        <div class="price">Rs.1000/-</div>
+        <button class="cart-btn" onclick="addToCart('Zink Sage Press-0n',1000,this)">
+          <i class="fas fa-bag-shopping"></i> Add To Cart
+        </button>
+      </div>
+    </div>
+
+  </div>
 </section>
 
 <!-- About -->
