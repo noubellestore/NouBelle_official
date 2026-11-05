@@ -1282,6 +1282,64 @@ html{
   scroll-behavior:smooth;
 }
 
+
+
+/* ===== NOUBELLE RESPONSIVE PRODUCT EXPERIENCE ===== */
+.card { cursor: pointer; }
+.card-img-wrap { background: #fff; }
+.card-img-wrap img { object-fit: contain; padding: 8px; }
+.product-quickview {
+  position: fixed; inset: 0; z-index: 2000; display: none;
+  align-items: center; justify-content: center; padding: 22px;
+  background: rgba(25, 12, 17, .72); backdrop-filter: blur(7px);
+}
+.product-quickview.is-open { display: flex; }
+.quickview-panel {
+  width: min(900px, 100%); max-height: min(88vh, 760px); overflow: auto;
+  display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(280px, .95fr);
+  background: #fff; border-radius: 22px; position: relative;
+  box-shadow: 0 24px 80px rgba(0,0,0,.25);
+}
+.quickview-visual { min-height: 420px; display:flex; align-items:center; justify-content:center; padding: 28px; background:#fbf8f7; }
+.quickview-visual img { width:100%; height:100%; max-height:590px; object-fit:contain; display:block; }
+.quickview-info { padding: 58px 38px 38px; display:flex; flex-direction:column; justify-content:center; }
+.quickview-kicker { color:var(--gold-dark); text-transform:uppercase; letter-spacing:2.5px; font-size:10px; margin-bottom:14px; }
+.quickview-info h2 { font-family:'Cormorant Garamond',serif; color:var(--maroon); font-size:clamp(30px,4vw,42px); line-height:1.1; margin:0 0 12px; }
+.quickview-price { color:var(--gold-dark); font-size:21px; font-weight:600; margin:0 0 20px; }
+.quickview-description { color:var(--text-light); font-size:14px; line-height:1.9; margin:0 0 28px; }
+.quickview-close { position:absolute; top:14px; right:16px; z-index:2; width:42px; height:42px; border:0; border-radius:50%; background:#fff; color:var(--maroon); font-size:25px; cursor:pointer; box-shadow:0 3px 15px rgba(0,0,0,.1); }
+.card:focus-visible { outline:2px solid var(--gold-dark); outline-offset:4px; }
+@media (max-width: 768px) {
+  .products { padding: 64px 4%; }
+  .section-header { margin-bottom: 34px; }
+  .grid { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; gap: 13px; }
+  .card { border-radius: 13px; }
+  .card-img-wrap { height: auto; aspect-ratio: 1 / 1; }
+  .card-img-wrap img { padding: 5px; object-fit: contain; }
+  .card-badge { top:8px; left:8px; padding:4px 8px; font-size:8px; letter-spacing:.7px; }
+  .card-content { padding: 11px 8px 13px; }
+  .card h3 { font-size: clamp(15px, 3.8vw, 19px); line-height:1.15; margin-bottom:5px; }
+  .card-category { font-size:9px; letter-spacing:1px; margin-bottom:6px; }
+  .price { font-size:14px; margin-bottom:10px; }
+  .price span { font-size:10px; }
+  .cart-btn { padding:9px 10px; font-size:9px; letter-spacing:.5px; gap:5px; }
+  .quickview-panel { grid-template-columns: 1fr; max-width: 480px; max-height: 90vh; }
+  .quickview-visual { min-height:0; height: min(48vh, 360px); padding:22px; }
+  .quickview-visual img { max-height:100%; }
+  .quickview-info { padding: 22px 24px 26px; }
+  .quickview-info h2 { font-size:30px; }
+  .quickview-price { margin-bottom:10px; }
+  .quickview-description { margin-bottom:18px; font-size:13px; }
+}
+@media (max-width: 360px) {
+  .grid { gap:9px; }
+  .card-content { padding-left:6px; padding-right:6px; }
+  .cart-btn { font-size:8px; padding:8px 7px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .card, .card-img-wrap img, .product-quickview { transition:none !important; }
+}
+
 </style>
 </head>
 
@@ -2577,6 +2635,21 @@ html{
 <div class="toast-container" id="toastContainer"></div>
 
 <!-- Back to Top -->
+
+<div class="product-quickview" id="productQuickview" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="quickviewTitle">
+  <div class="quickview-panel">
+    <button class="quickview-close" type="button" aria-label="Close product details">&times;</button>
+    <div class="quickview-visual"><img id="quickviewImage" src="" alt=""></div>
+    <div class="quickview-info">
+      <span class="quickview-kicker" id="quickviewCategory">NouBelle Collection</span>
+      <h2 id="quickviewTitle"></h2>
+      <p class="quickview-price" id="quickviewPrice"></p>
+      <p class="quickview-description" id="quickviewDescription"></p>
+      <button class="cart-btn" id="quickviewAdd" type="button"><i class="fas fa-bag-shopping"></i> Add To Cart</button>
+    </div>
+  </div>
+</div>
+
 <button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">
   <i class="fas fa-arrow-up"></i>
 </button>
@@ -2821,6 +2894,77 @@ document.addEventListener('keydown', (e) => {
     toggleCart();
   }
 });
+
+
+// ===== PRODUCT QUICK VIEW =====
+(function initProductQuickview() {
+  const modal = document.getElementById('productQuickview');
+  if (!modal) return;
+  const image = document.getElementById('quickviewImage');
+  const title = document.getElementById('quickviewTitle');
+  const category = document.getElementById('quickviewCategory');
+  const price = document.getElementById('quickviewPrice');
+  const description = document.getElementById('quickviewDescription');
+  const addButton = document.getElementById('quickviewAdd');
+  let activeProduct = null;
+
+  function productDescription(name, type) {
+    const lower = (name + ' ' + type).toLowerCase();
+    if (lower.includes('nail') || lower.includes('cat eye')) return 'A beautifully finished set designed to add an elegant touch to your everyday look. Please message us for availability and order details.';
+    if (lower.includes('anklet')) return 'A delicate finishing touch for your jewellery collection. Style it on its own or pair it with your favourite pieces.';
+    if (lower.includes('bracelet') || lower.includes('cuff')) return 'An effortlessly elegant accessory that adds a refined detail to your look. A lovely piece for everyday styling or gifting.';
+    if (lower.includes('necklace') || lower.includes('pendant') || lower.includes('locket') || lower.includes('chain')) return 'A timeless jewellery piece made to complement your personal style. Wear it solo for a subtle statement or layer it with your favourites.';
+    if (lower.includes('earring') || lower.includes('stud') || lower.includes('drop') || lower.includes('hoop')) return 'A charming pair to elevate your look, whether you are dressing up for an occasion or adding a little sparkle to everyday moments.';
+    return 'A thoughtfully selected NouBelle piece, chosen to bring a little extra charm to your collection. A lovely choice for everyday styling or gifting.';
+  }
+  function openCard(card) {
+    const img = card.querySelector('.card-img-wrap img');
+    const name = card.querySelector('h3');
+    const type = card.querySelector('.card-category');
+    const priceNode = card.querySelector('.price');
+    if (!img || !name || !priceNode) return;
+    const numericPrice = (priceNode.textContent.match(/[\d,]+/) || ['0'])[0].replace(/,/g, '');
+    activeProduct = { name: name.textContent.trim(), price: Number(numericPrice), button: null };
+    image.src = img.currentSrc || img.src;
+    image.alt = img.alt || activeProduct.name;
+    title.textContent = activeProduct.name;
+    category.textContent = type ? type.textContent.trim() : 'NouBelle Collection';
+    price.textContent = priceNode.textContent.trim();
+    description.textContent = productDescription(activeProduct.name, category.textContent);
+    modal.classList.add('is-open');
+    modal.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+    modal.querySelector('.quickview-close').focus();
+  }
+  function closeModal() {
+    modal.classList.remove('is-open');
+    modal.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+    activeProduct = null;
+  }
+  document.querySelectorAll('.card').forEach(card => {
+    card.setAttribute('tabindex', '0');
+    card.setAttribute('role', 'button');
+    card.setAttribute('aria-label', 'View product details: ' + (card.querySelector('h3')?.textContent.trim() || 'product'));
+    card.addEventListener('click', event => {
+      if (event.target.closest('.cart-btn')) return;
+      openCard(card);
+    });
+    card.addEventListener('keydown', event => {
+      if ((event.key === 'Enter' || event.key === ' ') && event.target === card) {
+        event.preventDefault(); openCard(card);
+      }
+    });
+  });
+  modal.querySelector('.quickview-close').addEventListener('click', closeModal);
+  modal.addEventListener('click', event => { if (event.target === modal) closeModal(); });
+  document.addEventListener('keydown', event => { if (event.key === 'Escape' && modal.classList.contains('is-open')) closeModal(); });
+  addButton.addEventListener('click', () => {
+    if (!activeProduct) return;
+    addToCart(activeProduct.name, activeProduct.price, addButton);
+  });
+})();
+
 </script>
 </body>
 </html>
